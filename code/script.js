@@ -34288,17 +34288,39 @@ const fishJson = {
     ]
 }
 
+console.log(fishJson)
 
 
-console.log(tryAPI);
+// fetch('fishJson')
 
-fetch('fishJson')
+// .then ((response) => {
+//         return response.json()
+//     })
+//     .then((data) => {
+//         console.log(data)
+//     })
 
-.then ((response) => {
-        return response.json()
-    })
-    .then((data) => {
-        console.log(data)
-    })
 
-console.log('hellooo')
+// const recipes = fishJson.hits
+// recipes.forEach(recipe => {
+//     console.log(recipe)
+// })
+
+
+
+// let recipeTitle = fishJson.hits.forEach(recipe => {
+//     console.log(recipe.recipe.label) 
+// })
+
+// let recipeSource = fishJson.hits.forEach(recipe => {
+//     console.log(recipe.recipe.source) 
+// })
+
+// let recipeImage = fishJson.hits.forEach(recipe => {
+//     console.log(recipe.recipe.image) 
+// })
+
+let recipeTotalTime = fishJson.hits.forEach(recipe => {
+    console.log(recipe.recipe.totalTime) 
+})
+
