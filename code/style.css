@@ -58,7 +58,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     width: 20px;
-    height: 20px;
+    height: 25px;
     position: fixed;
     top: 45px;
 }
@@ -73,6 +73,7 @@ body {
 }
 
 .p-container {
+    padding-left: 20px;
     position: fixed;
     top: 0;
     display: flex;
@@ -83,18 +84,14 @@ body {
 }
 
 .left-side {
-    /*display: flex;*/
     font-weight: lighter;
 }
 
 .right-side {
-    /*display: flex;*/
     padding-left: 5px;
     color: rgb(96, 153, 10);
     font-weight: 600;
-
 }
-
 
 
 .search-signin {
@@ -113,7 +110,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     font-size: 30px;
 }
 
@@ -124,7 +121,7 @@ body {
     max-width: 1100px;
     justify-content: space-between;
     margin: 0 auto;
-
+    border: black 2px solid;
 }
 
 .food-cards {
@@ -132,6 +129,9 @@ body {
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 300px;
+    border: black 2px solid;
+
 }
 
 @media (min-width: 768px){
@@ -140,10 +140,6 @@ body {
         max-width: 1100px;
         background: white;
     } 
-
-    .hamburger div {
-      
-    }
 
     .p-container {
         margin-left: 60px;
@@ -170,11 +166,6 @@ body {
         max-width: 1100px;
     }
 
-    .big-wrapper {
-        display: flex;
-        max-width: 1100px;
-      
-    }
     .h1-on-image {
         padding-left: 25%;
     }
@@ -187,7 +178,7 @@ body {
         padding-left: 30px;
     }
     .p-container {
-        width: 10%;
+        width: 20%;
     } 
 
     .food-cards {
