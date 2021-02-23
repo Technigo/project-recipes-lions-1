@@ -34301,7 +34301,15 @@ const showCards = (recipes) => {
     foodCards.innerHTML = ''
     recipes.forEach((recipe) => {
         foodCards.innerHTML += `
-        Num of ingredients: ${recipe.recipe.ingredients.length}
+        <div class="recipe-card">
+            <div class="img-container">
+            <img src="${recipe.recipe.image}"
+        </div>  
+        <div class="caption">
+            <h3>${recipe.recipe.label}</h3>
+            <p>Total cooking time: ${recipe.recipe.totalTime} min</p>
+        </div>
+
       `
     })
   }
@@ -34309,6 +34317,8 @@ const showCards = (recipes) => {
 
 
 const recipeArray = fishJson.hits.slice(0, 50)
+
+console.log(recipeArray)
 
 
 const ingredientNumbChoice = () => {
