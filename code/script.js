@@ -1,3 +1,7 @@
+const numbOfIngredients = document.getElementById('numb-of-ingredients')
+const foodCards = document.getElementById('food-cards')
+
+
 const fishJson = {
     "q": "fish",
     "from": 0,
@@ -34288,39 +34292,31 @@ const fishJson = {
     ]
 }
 
-console.log(fishJson)
+let cardsToShow = fishJson
+
+let ingredientLength
+
+//Show the cards 
+const showCards = (recipes) => {
+    foodCards.innerHTML = ''
+    recipes.forEach((recipe) => {
+        foodCards.innerHTML += `
+        Num of ingredients: ${recipe.recipe.ingredients.length}
+      `
+    })
+  }
+  showCards(fishJson.hits)
 
 
-// fetch('fishJson')
-
-// .then ((response) => {
-//         return response.json()
-//     })
-//     .then((data) => {
-//         console.log(data)
-//     })
+const recipeArray = fishJson.hits.slice(0, 50)
 
 
-// const recipes = fishJson.hits
-// recipes.forEach(recipe => {
-//     console.log(recipe)
-// })
+const ingredientNumbChoice = () => {
+    const filteredArray = recipeArray.filter((recipe) => recipe.recipe.ingredients.length === + numbOfIngredients.value)
+
+    showCards(filteredArray)
+}
 
 
 
-// let recipeTitle = fishJson.hits.forEach(recipe => {
-//     console.log(recipe.recipe.label) 
-// })
-
-// let recipeSource = fishJson.hits.forEach(recipe => {
-//     console.log(recipe.recipe.source) 
-// })
-
-// let recipeImage = fishJson.hits.forEach(recipe => {
-//     console.log(recipe.recipe.image) 
-// })
-
-let recipeTotalTime = fishJson.hits.forEach(recipe => {
-    console.log(recipe.recipe.totalTime) 
-})
-
+numbOfIngredients.addEventListener('change', () => ingredientNumbChoice())
